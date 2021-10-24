@@ -1,0 +1,100 @@
+div h1 {
+  color: #fafafa;
+  font-size: 45px;
+}
+
+div h2 {
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+strong {
+  font-size: 60px;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  background-color: #fff7ae;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  color: #297f87;
+  display: inline;
+  font-size: 14px;
+  font-weight: 450;
+  padding: 5px 15px;
+}
+
+button:hover {
+  background-color: #fcf18f;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.app {
+  background: linear-gradient(
+    109.6deg,
+    rgb(245, 95, 152) 11.2%,
+    rgb(254, 148, 136) 100.2%
+  );
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+i,
+.today-icon {
+  color: #ffe9e3;
+  font-size: 130px;
+  padding: 30px 0;
+}
+
+.weather-icons {
+  color: #ffe9e3;
+  font-size: 30px;
+  padding: 15px;
+  text-align: center;
+}
+
+.days {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.city-search {
+  border-radius: 10px;
+  display: inline;
+  padding: 30px 0 0;
+  text-align: right;
+}
+
+.change-city {
+  background-color: #fff7ae;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  color: #297f87;
+  display: inline;
+  font-size: 14px;
+  font-weight: 450;
+  padding: 5px 15px;
+}
+
+.change-city:hover {
+  background-color: #fcf18f;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
