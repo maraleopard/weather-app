@@ -17,7 +17,7 @@ p {
   text-align: center;
 }
 
-.current-city {
+button {
   background-color: #fff7ae;
   border: none;
   border-radius: 10px;
@@ -29,7 +29,7 @@ p {
   padding: 5px 15px;
 }
 
-.current-city:hover {
+button:hover {
   background-color: #fcf18f;
   border: none;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
