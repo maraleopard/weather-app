@@ -37,6 +37,10 @@ button:hover {
   transition: all 200ms ease-in-out;
 }
 
+footer {
+  text-align: center;
+}
+
 .app {
   background: linear-gradient(
     109.6deg,
