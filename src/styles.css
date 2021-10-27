@@ -9,32 +9,16 @@ div h2 {
   font-weight: 200;
 }
 
+li {
+  list-style: none;
+}
+
 strong {
   font-size: 60px;
 }
 
 p {
   text-align: center;
-}
-
-button {
-  background-color: #fff7ae;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  color: #297f87;
-  display: inline;
-  font-size: 14px;
-  font-weight: 450;
-  padding: 5px 15px;
-}
-
-button:hover {
-  background-color: #fcf18f;
-  border: none;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
 }
 
 footer {
@@ -54,10 +38,10 @@ footer {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  max-width: 600px;
   padding: 30px;
 }
 
-i,
 .today-icon {
   color: #ffe9e3;
   font-size: 130px;
@@ -96,6 +80,26 @@ i,
 }
 
 .change-city:hover {
+  background-color: #fcf18f;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.current-city {
+  background-color: #fff7ae;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  color: #297f87;
+  display: inline;
+  font-size: 14px;
+  font-weight: 450;
+  padding: 5px 15px;
+}
+
+.current-city:hover {
   background-color: #fcf18f;
   border: none;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
