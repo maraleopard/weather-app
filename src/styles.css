@@ -10,13 +10,17 @@ div h2 {
 }
 
 ul {
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
 li {
   list-style: none;
   font-size: 13px;
   font-weight: 500;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 strong {
@@ -34,12 +38,18 @@ p {
 }
 
 footer {
+  font-size: 12px;
   margin-top: 10px;
   text-align: center;
 }
 
 a {
+  color: #297f87;
   text-decoration: none;
+}
+
+a:hover {
+  color: #f55f98;
 }
 
 .app {

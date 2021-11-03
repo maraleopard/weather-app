@@ -27,7 +27,13 @@ let months = [
 let month = months[now.getMonth()];
 let date = now.getDate();
 let hour = now.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 
 let h2 = document.querySelector("h2");
 
@@ -49,11 +55,22 @@ function changeCity(event) {
 let searchForm = document.querySelector("#search");
 searchForm.addEventListener("submit", changeCity);
 
+function displayMain(city) {
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = city;
+  let apiKey = "54e9eef436213904de67ea13a2835d75";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showTemperature);
+}
+
 function showTemperature(response) {
   let currentTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = currentTemp;
 
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].description;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
@@ -76,3 +93,5 @@ function showCurrentLocation(event) {
 
 let getCurrentPosition = document.querySelector("button");
 getCurrentPosition.addEventListener("click", showCurrentLocation);
+
+displayMain("Utrecht");
