@@ -56,8 +56,6 @@ let searchForm = document.querySelector("#search");
 searchForm.addEventListener("submit", changeCity);
 
 function displayMain(city) {
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = city;
   let apiKey = "54e9eef436213904de67ea13a2835d75";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -65,6 +63,8 @@ function displayMain(city) {
 }
 
 function showTemperature(response) {
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = response.data.name;
   let currentTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = currentTemp;
@@ -75,6 +75,12 @@ function showTemperature(response) {
   humidity.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
+  let iconCurrent = document.querySelector("#icon-current");
+  iconCurrent.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconCurrent.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {
@@ -94,4 +100,4 @@ function showCurrentLocation(event) {
 let getCurrentPosition = document.querySelector("button");
 getCurrentPosition.addEventListener("click", showCurrentLocation);
 
-displayMain("Utrecht");
+displayMain("Amsterdam");
