@@ -65,6 +65,7 @@ function displayMain(city) {
 function showTemperature(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
+
   let currentTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = currentTemp;
