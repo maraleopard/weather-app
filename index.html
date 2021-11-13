@@ -47,10 +47,12 @@
             </div>
             <div class="forecast-overview" id="forecast"></div>
           </div>
-          <div class="row search">
-            <div class="col-12">
+          <div class="row g-3 search">
+            <div class="col-sm-6">
               <form class="city-search" id="search">
-                <input type="text" autocomplete="off" id="city-input" />
+                <input type="text" autocomplete="off" class="form-control form-control-sm" id="city-input" />
+                </form></div>
+                <div class="col-sm">
                 <input
                   type="submit"
                   value="Change city"
@@ -58,7 +60,8 @@
                   id="change-city-button"
                 />
               </form>
-              <button class="current-city">Current</button>
+              
+              <button class="current-city">Current</button></div>
             </div>
           </div>
         </div>
