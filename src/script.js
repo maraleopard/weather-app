@@ -99,24 +99,27 @@ function showCurrentLocation(event) {
 }
 
 function showForecast() {
-  let forecastDisplay = document.querySelector("#forecast");
-
-  let forecastHTML = `<div class="row">`;
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+
+  let forecastCode = `<div class="row"><div class="col-1"></div>`;
   days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
-                Tuesday
+    forecastCode =
+      forecastCode +
+      `<div class="col-2">
+                ${day}
                 <br />
                 <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" class="forecast-icons" />
                 <br />
                 <span class="weather-forecast-temp-max">
-                 19°</span> <span class="weather-forecast-temp-min">17°</span>
+                 19°</span> 
+                 <span class="weather-forecast-temp-min">17°</span>
               </div>`;
   });
 
-  forecastDisplay.innerHTML = forecastHTML + `</div>`;
+  forecastCode = forecastCode + `</div>`;
+
+  let forecastDisplay = document.querySelector("#forecast");
+  forecastDisplay.innerHTML = forecastCode;
 }
 
 let getCurrentPosition = document.querySelector("button");
