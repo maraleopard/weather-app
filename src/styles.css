@@ -33,10 +33,6 @@ hr {
   top: -15px;
 }
 
-p {
-  text-align: center;
-}
-
 footer {
   font-size: 12px;
   margin-top: 10px;
@@ -54,9 +50,11 @@ a:hover {
 
 .app {
   background: linear-gradient(
-    109.6deg,
-    rgb(245, 95, 152) 11.2%,
-    rgb(254, 148, 136) 100.2%
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
   );
   border: 1px solid #ffffff;
   border-radius: 25px;
@@ -69,21 +67,11 @@ a:hover {
   padding: 30px;
 }
 
-.main-icon {
-  display: relative;
-  left: -15px;
-}
-
-.weather-icons {
-  color: #ffe9e3;
-  font-size: 30px;
-  padding: 15px;
-  text-align: center;
-}
-
 .days {
   font-size: 12px;
   font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .city-search {

@@ -98,7 +98,29 @@ function showCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+function showForecast() {
+  let forecastDisplay = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+                Tuesday
+                <br />
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" class="forecast-icons" />
+                <br />
+                <span class="weather-forecast-temp-max">
+                 19°</span> <span class="weather-forecast-temp-min">17°</span>
+              </div>`;
+  });
+
+  forecastDisplay.innerHTML = forecastHTML + `</div>`;
+}
+
 let getCurrentPosition = document.querySelector("button");
 getCurrentPosition.addEventListener("click", showCurrentLocation);
 
 displayMain("Amsterdam");
+showForecast();

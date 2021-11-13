@@ -20,7 +20,6 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
-
   </head>
   <body>
     <div class="container">
@@ -29,76 +28,61 @@
           <div class="col-6">
             <h1></h1>
             <h2></h2>
-            </div>
-            <div class="col"><img src="" alt="" class="main-icon" id="icon-current"></div>
-            <div class="row">
-              <div class="col-4">
-              <strong id ="current-temp"></strong> 
-                °C
-            </div>
-                <div class="col">
-                <ul>
-                    <li><span id="description"></span></li>
-                    <li>Humidity <span id="humidity"></span>%</li>
-                  
-                  <li>Wind <span id="wind"></span> km/h</li>
-                </ul>
-               </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <hr />
           </div>
-          <div class="row days">
-            <div class="col-1"></div>
-            <div class="col-2">
-              Monday
-              <br />
-              <i class="fas fa-cloud-sun weather-icons"></i>
-              <br>
-              <p>19°</p>
+          <div class="col">
+            <img src="" alt="" class="main-icon" id="icon-current" />
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <strong id="current-temp"></strong>
+              °C
             </div>
-            <div class="col-2">
-              Tuesday
-              <br />
-              <i class="fas fa-sun weather-icons"></i>
-              <br>
-              <p>21°</p>
+            <div class="col">
+              <ul>
+                <li><span id="description"></span></li>
+                <li>Humidity <span id="humidity"></span>%</li>
+
+                <li>Wind <span id="wind"></span> km/h</li>
+              </ul>
             </div>
-            <div class="col-2">
-              Wednesday
-              <br />
-              <i class="fas fa-sun weather-icons"></i>
-              <br>
-              <p>21°</p>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <hr />
             </div>
-            <div class="col-2">
-              Thursday
-              <br />
-              <i class="fas fa-sun weather-icons"></i>
-              <br>
-              <p>20°</p>
+            <div class="row days">
+              <div class="col">
+                Monday
+                <br />
+                <img src="" alt="" class="forecast-icons" />
+                <br />
+                19° 16°
+              </div>
             </div>
-            <div class="col-2">
-              Friday
-              <br />
-              <i class="fas fa-cloud weather-icons"></i>
-              <br>
-              <p>17°</p>
-            </div>
-            <div class="col-1"></div>
           </div>
           <div class="row search">
-          <div class="col-12">
-            <form class="city-search" id="search">
-                <input type="text" autocomplete="off" id="city-input">
-             <input type="submit" value="Change city" class="change-city" id="change-city-button">
-            </form><button class="current-city">Current</button>
+            <div class="col-12">
+              <form class="city-search" id="search">
+                <input type="text" autocomplete="off" id="city-input" />
+                <input
+                  type="submit"
+                  value="Change city"
+                  class="change-city"
+                  id="change-city-button"
+                />
+              </form>
+              <button class="current-city">Current</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <footer>Coded by Maraluce van Dijk, <a href="https://github.com/maraleopard/weather-app" target="_blank">open-sourced on GitHub</a></footer>
+    <footer>
+      Coded by Maraluce van Dijk,
+      <a href="https://github.com/maraleopard/weather-app" target="_blank"
+        >open-sourced on GitHub</a
+      >
+    </footer>
     <script src="src/script.js"></script>
   </body>
 </html>
