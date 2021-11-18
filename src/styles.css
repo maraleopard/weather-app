@@ -69,9 +69,17 @@ a:hover {
 
 .forecast-overview {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 25px;
   text-align: center;
+}
+
+.weather-forecast-temp-max {
+  font-weight: 700;
+}
+
+.weather-forecast-temp-min {
+  font-weight: 400;
 }
 
 .city-search {
