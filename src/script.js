@@ -62,22 +62,44 @@ function displayMain(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-function showForecast() {
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
+function showForecast(response) {
+  let forecast = response.data.daily;
 
   let forecastCode = `<div class="row"><div class="col-1"></div>`;
-  days.forEach(function (day) {
-    forecastCode =
-      forecastCode +
-      `<div class="col-2">
-                ${day}
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 6) {
+      forecastCode =
+        forecastCode +
+        `<div class="col-2">
+                ${formatDay(forecastDay.dt)}
                 <br />
-                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" class="forecast-icons" />
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" alt="" class="forecast-icons" />
                 <br />
                 <span class="weather-forecast-temp-max">
-                 19°</span> 
-                 <span class="weather-forecast-temp-min">17°</span>
+                 ${Math.round(forecastDay.temp.max)}°</span> 
+                 <span class="weather-forecast-temp-min">${Math.round(
+                   forecastDay.temp.min
+                 )}°</span>
               </div>`;
+    }
   });
 
   forecastCode = forecastCode + `</div>`;
