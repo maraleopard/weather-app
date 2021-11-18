@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,14 +24,15 @@
     <div class="container">
       <div class="app">
         <div class="row overview">
-          <div class="col-6">
+          <div class="col">
             <h1></h1>
             <h2></h2>
           </div>
-          <div class="col">
+
+          <div class="row">
+            <div class="col-2">
             <img src="" alt="" class="main-icon" id="icon-current" />
           </div>
-          <div class="row">
             <div class="col-4">
               <strong id="current-temp"></strong>
               °C
@@ -35,9 +40,9 @@
             <div class="col">
               <ul>
                 <li><span id="description"></span></li>
-                <li>Humidity <span id="humidity"></span>%</li>
+                <li>Humidity <span id="humidity" class="data"></span>%</li>
 
-                <li>Wind <span id="wind"></span> km/h</li>
+                <li>Wind <span id="wind" class="data"></span> km/h</li>
               </ul>
             </div>
           </div>
